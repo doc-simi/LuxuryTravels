@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Welcome&mdash;Luxury Travels</title>
+</head>
+<body>
+  <header class="header">
+    <!-- Background Image -->
+    <div class="header__background">
+      <video class="header__background--video" autoplay loop muted playsinline>
+        <source src="media/bg-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="header__background--overlay"></div>
+    <!-- Navigation Bar -->
+    <navbar>
+      <div class="logo">
+        <a class="logo__link" href="index.html">Luxury Travels</a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+          <li class="nav__item"><a class="nav__link" href="#bookings">Booking</a></li>
+          <li class="nav__item"><a class="nav__link" href="#top-destinations">Gallery</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </navbar>
+
+    <!-- Landing Page -->
+    <div class="home">
+      <div class="home__big-text">
+        <h1 class="heading heading--1">
+          <div class="home__big-text--1">explore</div>
+          <div class="home__big-text--2">the world</div>
+        </h1>
+      </div>
+      <div class="home__small-text">
+        <h3 class="heading heading--5">Discover Timeless Luxury</h3>
+      </div>
+      <div class="home__button">
+        <button class="btn btn--1 home__btn">explore &darr;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section class="about" id="services">
+    <h2 class="about__header heading heading--2">Our Services</h2>
+    <div class="about__content">
+      <!-- Content 1-->
+      <div class="about__content--main about__content--1">
+        <div class="about__content--title">Exquisite Accomodation</div>
+        <video class="about__content--video about__content--video-1" autoplay loop muted playsinline>
+          <source src="media/about-1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Content 2-->
+      <div class="about__content--main about__content--2">
+        <div class="about__content--title">Free body care</div>
+        <video class="about__content--video about__content--video-2" autoplay loop muted playsinline>
+          <source src="media/about-2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Content 3-->
+      <div class="about__content--main about__content--3">
+        <div class="about__content--title">Quality food service</div>
+        <video class="about__content--video about__content--video-3" autoplay loop muted playsinline>
+          <source src="media/about-3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="top-destinations" id="top-destinations">
+    <h2 class="top-destinations__heading heading heading--2">
+      Top destinations
+    </h2>
+    <div class="top-destinations__content">
+      <!-- Content 1 -->
+      <figure class="top-destination top-destination--1">
+        <div class="top-destination__image-box"><img src="media/img-1.jpg" alt="Top destination 1" class="top-destination__image"></div>
+        <figcaption class="top-destination__caption">
+          Eiffel Tower, Paris
+        </figcaption>
+      </figure>
+
+      <!-- Content 2 -->
+      <figure class="top-destination top-destination--2">
+        <div class="top-destination__image-box"><img src="media/img-2.jpg" alt="Top destination 2" class="top-destination__image"></div>
+        <figcaption class="top-destination__caption">
+          Great Wall of China, Beijing
+        </figcaption>
+      </figure>
+
+      <!-- Content 3 -->
+      <figure class="top-destination top-destination--3">
+        <div class="top-destination__image-box"><img src="media/img-3.jpg" alt="Top destination 3" class="top-destination__image"></div>
+        <figcaption class="top-destination__caption">
+          Machu Picchu, Peru
+        </figcaption>
+      </figure>
+
+      <!-- Content 4 -->
+      <figure class="top-destination top-destination--4">
+        <div class="top-destination__image-box"><img src="media/img-4.jpg" alt="Top destination 4" class="top-destination__image"></div>
+        <figcaption class="top-destination__caption">
+          Colosseum, Rome
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Bookings -->
+  <section class="bookings" id="bookings">
+    <h2 class="bookings__header heading heading--2">Your Bookings</h2>
+    <div class="bookings__card">
+      <div class="bookings__background">
+        <video class="bookings__background--video" autoplay loop muted playsinline>
+          <source src="media/booking-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="bookings__card-form">
+        
+        <p>Plan your next luxurious getaway with us. Fill in the details below to book your personalized travel experience.</p>
+        <!-- Booking details will be dynamically loaded here -->
+      
+        <form class="booking-form">
+          <h4 class="heading heading--4 booking-form__header">Reservation Details</h4>
+          
+          <div class="form-group">
+            <input class="form-group__input--1" type="text" id="name" placeholder="Full Name" required />
+            <label class="form-group__label" for="name">Full Name</label>
+          </div>
+
+          <div class="form-group">
+            <input class="form-group__input--1" type="email" id="email" placeholder="Email Address" required />
+            <label class="form-group__label" for="email">Email Address</label>
+          </div>
+          
+          <div class="form-group">
+            <!-- <label class="form-group__label--1" for="destination">Destination</label> -->
+            <select class="form-group__input--1" id="destination">
+              <option>Select a destination</option>
+              <option>BoraBora</option>
+              <option>Paris</option>
+              <option>Dubai</option>
+              <option>Kyoto</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <!-- Dates -->
+            <div class="form-group__dates">
+              <!-- Check In -->
+              <div class="form-group__dates--check-in">
+                <label class="form-group__label--2" for="checkin">Check-in</label>
+                <input class="form-group__dates--input" type="date" id="checkin" />
+              </div>
+              
+              <!-- Check In -->
+              <div class="form-group__dates--check-out">
+                <label class="form-group__label--2" for="checkout">Check-out</label>
+                <input class="form-group__dates--input" type="date" id="checkout" />
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-group__label--2" for="guests">Guests</label>
+            <select class="form-group__input--1" id="guests">
+              <option value="1">1 guest</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <button class="form-group__button btn" type="submit">book now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact__image-box">
+      <img src="media/contact__img.jpg" alt="Contact Us" class="contact__image">
+    </div>
+    <div class="contact-info">
+      <h2 class="heading heading--2 contact__header">Contact Us</h2>
+      <p><strong>Address:</strong> 123 Riviera Lane, Beverly Hills, CA 90210</p>
+      <p><strong>Phone:</strong> +1 (800) 555-8901</p>
+      <p><strong>Email:</strong> info@luxurytravels.com</p>
+      <p><strong>Hours:</strong> Mon - Fri, 9AM - 6PM (PST)</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <p>&copy; 2023 Luxury Travels. All rights reserved.</p>
+    </div>
+</body>
+</html>
