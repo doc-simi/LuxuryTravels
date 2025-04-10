@@ -8,11 +8,23 @@ html {
   font-size: 10px; /* Changing roof font size to make usage of rem easy */
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
 
-  @media only screen and (max-width: 768px) {
-    html {
-      font-size: 9px; /* Adjust font size for smaller screens */
-    }
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 9px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 8px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 6px; /* Adjust font size for smaller screens */
   }
 }
 
@@ -164,6 +176,12 @@ navbar {
   padding: 4rem;
   padding-left: 8rem; /* 80px */
   color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    height: calc(100svh - 40rem); /* 100vh - 80px */
+  }
 }
 
 .home__big-text {
