@@ -16,8 +16,8 @@ app.use(
   })
 );
 
-const API_KEY =
-  'a38ca758fdc3e900dc48e99600c164ddefd53a11e31b7109cc427634d5e73380';
+// API key from environment variable
+const API_KEY = process.env.SERP_API_KEY;
 
 // Base URL
 const BASE_URL = `https://serpapi.com/search.json?engine=google_flights&hl=en&api_key=${API_KEY}`;
