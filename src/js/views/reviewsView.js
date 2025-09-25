@@ -24,7 +24,7 @@ class reviewsView {
         (review, i) => `<div class="review">
                 <div class="review__img-box">
                   <img
-                    src="${this._images[i]}}"
+                    src="${this._images[i]}"
                     alt="profile pic"
                     class="review__img"
                   />
