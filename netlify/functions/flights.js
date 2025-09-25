@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 export async function handler(event, context) {
   try {
     // API key from environment variable
-    const API_KEY = process.env.SERP_API_KEY;
+    const API_KEY = process.env.SERPAPI_KEY;
 
     // Base URL
     const BASE_URL = `https://serpapi.com/search.json?engine=google_flights&hl=en&api_key=${API_KEY}`;

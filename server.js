@@ -12,12 +12,16 @@ const PORT = process.env.PORT || 3000;
 // ✅ Allow requests from both local dev & Netlify frontend
 app.use(
   cors({
-    origin: ['http://localhost:1234', 'https://your-netlify-site.netlify.app'],
+    origin: [
+      'http://localhost:1234',
+      'https://your-netlify-site.netlify.app',
+      'http://localhost:51277',
+    ],
   })
 );
 
 // API key from environment variable
-const API_KEY = process.env.SERP_API_KEY;
+const API_KEY = process.env.SERPAPI_KEY;
 
 // Base URL
 const BASE_URL = `https://serpapi.com/search.json?engine=google_flights&hl=en&api_key=${API_KEY}`;

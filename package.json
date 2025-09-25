@@ -26,10 +26,10 @@
     "sass": "^1.90.0"
   },
   "dependencies": {
-    "express": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "dotenv-expand": "^11.0.7",
+    "express": "^5.1.0",
     "node-fetch": "^2.7.0"
   }
 }
