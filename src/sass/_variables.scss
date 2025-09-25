@@ -1,0 +1,85 @@
+// BREAKPOINTS
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+// COLORS
+/* _variables.scss */
+:root {
+  --primary: #fd9b07; // Use for buttons, highlights, CTAs, hover states.
+  --primary-light: #fbab3352; // Use for buttons, highlights, CTAs, hover states.
+  --primary-dark: #c77805;
+  --secondary: #333; // headings, subheadings, muted text, or secondary UI elements
+  --secondary-light: #555;
+  --text: #111; // Your main content text color.
+  --text-red: 250, 0, 0; // rgb(250, 35, 35)
+  --bg-color: #fff; // Base background (body, containers).
+  --bg-contrast: #eaeaea;
+  --grey: #aaa; // Borders, placeholders, less-important text.
+  --grey-2: #777; // Borders, placeholders, less-important text.
+  --grey-3: #5c5c5c; // Borders, placeholders, less-important text.
+  --grey-4: #3b3b3b; // Borders, placeholders, less-important text.
+  --grey-5: #dddddd; // Borders, placeholders, less-important text.
+  --gradient: linear-gradient(
+    135deg,
+    #fd9b07,
+    #c77805
+  ); // Hero sections, buttons, or special highlights.
+  --linear-gradient-1: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.85),
+    0%,
+    rgba(255, 255, 255, 0.85),
+    50%,
+    transparent 50%
+  );
+  --header-text: #fff;
+}
+
+/* Dark theme overrides */
+:root[data-theme='dark'] {
+  --primary: #ffae33;
+  --primary-dark: #e6951f;
+  --secondary: #eee;
+  --secondary-light: #bbb;
+  --text: #f5f5f5;
+  --bg-color: #111;
+  --bg-contrast: #222;
+  --grey: #666;
+  --gradient: linear-gradient(135deg, #333, #111);
+  --linear-gradient-1: linear-gradient(
+    100deg,
+    rgba(17, 17, 17, 0.85),
+    0%,
+    rgba(17, 17, 17, 0.85),
+    50%,
+    transparent 50%
+  );
+}
+
+// FONT SIZES
+$fs-base: 1.6rem; /* 16px */
+$fs-small: 1.2rem; /* 8px */
+$fs-medium: 1.4rem; /* 14px */
+$fs-large: 2rem; /* 20px */
+$fs-xlarge: 2.4rem; /* 24px */
+$fs-xxlarge: 2.8rem; /* 32px */
+$fs-xxxlarge: 3.2rem; /* 32px */
+$fs-hero: 4.8rem; /* 48px for hero sections */
+$fs-bigSpecial: 8rem;
+
+// FONT FAMILY
+$ff-primary: 'Inter', serif;
+$ff-secondary: 'Poppins', sans-serif;
+$ff-secondary--2: 'Roboto Condensed', sans-serif;
+
+// BOX-SHADOW
+$shadow--1: 0 1rem 2rem rgba(0, 0, 0, 0.8);
+$shadow--2: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.3);
+$shadow--3: 0 0rem 0.1rem 0.1rem rgba(179, 179, 179, 0.3);
+$shadow--4: 0 0.7rem 0.6rem rgba(0, 0, 0, 0.2);
+$shadow--5: 0 0.7rem 0.6rem rgba(0, 0, 0, 0.2);
+
+// RGB VALUES
+$primary-light: rgba(253, 155, 7);

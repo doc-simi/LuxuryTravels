@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $ff-primary;
+  font-weight: 400;
+  font-size: $fs-base; /* 16px */
+  line-height: 2.4rem; /* 24px */
+  color: var(--text);
+  background-color: var(--light);
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+/* defaults */
+a:focus {
+  outline: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: 100svh;
+  grid-auto-rows: min-content;
+}

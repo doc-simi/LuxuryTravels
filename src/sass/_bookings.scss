@@ -1,0 +1,131 @@
+.bookings {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 100svh;
+  width: 100vw;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__overlay {
+    // z-index: 2500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+
+    i {
+      font-size: $fs-xxxlarge;
+      color: var(--bg-color);
+      cursor: pointer;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 3000;
+    width: 70%;
+    max-width: 80rem;
+    height: 80%;
+    max-height: 50rem;
+    background-color: var(--bg-color);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background-color: var(--grey);
+    }
+  }
+
+  &__nav {
+    // width: 100%;
+    // border: 1px solid blue;
+    // height: 10rem;
+    padding: 2rem 6rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      font-size: $fs-large;
+      height: 70%;
+      // border: 1px solid orange;
+      display: flex;
+      align-items: center;
+    }
+
+    &-list {
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-item {
+      // border: 1px solid green;
+      list-style: none;
+      height: 100%;
+      display: flex;
+      overflow: hidden;
+      color: var(--grey);
+      // justify-content: center;
+      // align-items: center;
+
+      &.active {
+        color: var(--bg-text);
+        font-weight: 500;
+      }
+
+      &:first-child {
+        border-top-left-radius: 1rem;
+      }
+      &:last-child {
+        border-top-right-radius: 1rem;
+      }
+    }
+
+    &-link,
+    &-link:visited,
+    &-link:link {
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      color: inherit;
+      font-family: $ff-primary;
+      transition: all 0.4s;
+    }
+
+    &-link:hover {
+      color: var(--text) !important;
+    }
+  }
+
+  &__tab {
+    display: none;
+    padding: 2rem 3rem 5rem;
+
+    &.active {
+      display: block;
+    }
+  }
+}

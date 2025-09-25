@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1.6rem; /* 16px */
   line-height: 2.4rem; /* 24px */
   color: #333;
@@ -38,13 +38,12 @@ body {
 
 /* defaults */
 a:focus {
-  outline:none;
+  outline: none;
 }
 
 /* Typography */
 .heading {
-  
-  line-height: .5rem;
+  line-height: 0.5rem;
   margin-bottom: 1.6rem; /* 16px */
 }
 
@@ -80,7 +79,7 @@ a:focus {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   border: none;
 }
 
@@ -95,15 +94,15 @@ a:focus {
   letter-spacing: 3px;
 }
 
-navbar {
+.navbar {
   height: 8rem; /* 80px */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 4rem; /* 20px 40px */
-  background-color: rgba(51, 51, 51, .3); /* 51, 51, 51, 0.5 */
+  background-color: rgba(51, 51, 51, 0.3); /* 51, 51, 51, 0.5 */
   backdrop-filter: blur(8px);
-  animation: slideDown .5s ease-in-out 1s backwards;
+  animation: slideDown 0.5s ease-in-out 1s backwards;
 }
 
 .header__background {
@@ -133,7 +132,6 @@ navbar {
 }
 
 .nav {
-  
 }
 
 .nav__list {
@@ -160,7 +158,7 @@ navbar {
 
 .nav__link:hover {
   color: #c4c4c4;
-  transform: translateY(-.3rem);
+  transform: translateY(-0.3rem);
 }
 
 /* Pages */
@@ -191,7 +189,7 @@ navbar {
 .home__big-text {
   /* border: 1px solid #333; */
   /* padding: 2rem; 20px */
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin-bottom: 2.5rem;
 
   h1 {
@@ -203,18 +201,18 @@ navbar {
 
 .home__small-text {
   /* padding-left: 2rem; */
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
   letter-spacing: 2px;
   animation: fadeIn 1.5s ease-in-out 1.5s backwards;
 }
 
 .home__big-text--1 {
   margin-bottom: 2.5rem;
-  animation: slideInLeft .5s ease-in-out;
+  animation: slideInLeft 0.5s ease-in-out;
 }
 
 .home__big-text--2 {
-  animation: fadeIn 1.5s ease-in-out .5s backwards;
+  animation: fadeIn 1.5s ease-in-out 0.5s backwards;
 }
 
 .home__button {
@@ -223,8 +221,7 @@ navbar {
 }
 
 .home__btn {
-  animation: popUp .5s ease-in-out 2.5s backwards;
-
+  animation: popUp 0.5s ease-in-out 2.5s backwards;
 }
 
 /* About Page */
@@ -262,15 +259,13 @@ navbar {
 
 .about__content--main:hover .about__content--video {
   filter: blur(3px) brightness(0.87);
-  
 }
-
 
 .about__content--video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all .1s ease;
+  transition: all 0.1s ease;
 }
 
 .about__content--title {
@@ -281,7 +276,6 @@ navbar {
   height: 100%;
   transform: translateY(-100%);
 
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,8 +283,8 @@ navbar {
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
-  
-  transition: all .3s ease;
+
+  transition: all 0.3s ease;
 }
 
 @media only screen and (max-width: 600px) {
@@ -298,7 +292,6 @@ navbar {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
-
 
 /* Top destinations */
 .top-destinations {
@@ -325,17 +318,16 @@ navbar {
 
 .top-destination {
   /* border-radius: 5px; */
-  
 }
 
 .top-destination__image-box {
   height: 100%;
   overflow: hidden;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .top-destination__image-box:hover {
-  border-radius: 65% 35% 70% 30% / 27% 78% 22% 73% ;
+  border-radius: 65% 35% 70% 30% / 27% 78% 22% 73%;
 }
 
 .top-destination__image {
@@ -344,12 +336,11 @@ navbar {
   object-fit: cover;
   object-position: center;
   border-radius: 3px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .top-destination__image:hover {
   transform: scale(1.2);
-  
 }
 
 .top-destination__caption {
@@ -378,7 +369,12 @@ navbar {
   margin: 6rem auto;
   padding: 4rem;
   position: relative;
-  background-image: linear-gradient(100deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 50%, transparent 50%);
+  background-image: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.85) 50%,
+    transparent 50%
+  );
 }
 
 .bookings__background {
@@ -414,7 +410,7 @@ navbar {
 
 .form-group {
   /* border: 1px solid black; */
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   position: relative;
 }
 
@@ -444,9 +440,9 @@ navbar {
   font-weight: 500;
   border: none;
   background-color: #fff;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   border-bottom: 3px solid transparent;
-  color: #333;  
+  color: #333;
 }
 
 .form-group__dates--input:focus {
@@ -460,7 +456,7 @@ navbar {
   margin-left: 1.5rem; /* 15px */
   color: #555;
   display: block;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .form-group__label--1 {
@@ -475,9 +471,9 @@ navbar {
   border: none;
   /* border-radius: 5px; */
   background-color: #fff;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   border-bottom: 3px solid transparent;
-  color: #333;  
+  color: #333;
 }
 
 .form-group__input--1::placeholder {
@@ -485,7 +481,7 @@ navbar {
   font-size: 1.4rem; /* 16px */
 }
 
-.form-group__input--1:placeholder-shown+.form-group__label {
+.form-group__input--1:placeholder-shown + .form-group__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-3rem);
@@ -494,7 +490,7 @@ navbar {
 .form-group__input--1:focus {
   outline: none;
   border-bottom: 3px solid #fd9b07;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .form-group__input--1:focus:invalid {
@@ -511,14 +507,14 @@ navbar {
 
 .form-group__button:hover {
   /* background-color: #333; */
-  transform: translateY(-.5rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (max-width: 700px) {
   .bookings__card {
     background-image: none;
-    background-color: rgba(255, 255, 255, 0.85)
+    background-color: rgba(255, 255, 255, 0.85);
   }
 
   .bookings__card-form {
@@ -527,7 +523,7 @@ navbar {
 
   .bookings__background--video {
     object-position: right;
-    filter: brightness(.95);
+    filter: brightness(0.95);
   }
 }
 
@@ -558,14 +554,13 @@ navbar {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact:hover .contact__image {
   transform: scale(1.4);
   object-position: center;
 }
-
 
 .contact-info p {
   margin-bottom: 1rem;
@@ -601,7 +596,7 @@ navbar {
 @media only screen and (max-width: 600px) {
   .bookings__card {
     background-image: none;
-    background-color: rgba(255, 255, 255, 0.85)
+    background-color: rgba(255, 255, 255, 0.85);
   }
 
   .bookings__card-form {
@@ -610,7 +605,7 @@ navbar {
 
   .bookings__background--video {
     object-position: right;
-    filter: brightness(.95);
+    filter: brightness(0.95);
   }
 }
 

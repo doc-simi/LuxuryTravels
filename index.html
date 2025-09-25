@@ -1,235 +1,850 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@400;500;600;700;800;900&family=Roboto+Condensed:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Stylesheet-->
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <script
+      async
+      src="https://kit.fontawesome.com/6aed991606.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <title>Welcome&mdash;Luxury Travels</title>
-</head>
-<body>
-  <header class="header">
-    <!-- Background Image -->
-    <div class="header__background">
-      <video class="header__background--video" autoplay loop muted playsinline>
-        <source src="media/bg-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="header__background--overlay"></div>
-    <!-- Navigation Bar -->
-    <navbar>
-      <div class="logo">
-        <a class="logo__link" href="index.html">Luxury Travels</a>
-      </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#bookings">Booking</a></li>
-          <li class="nav__item"><a class="nav__link" href="#top-destinations">Gallery</a></li>
-          <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </navbar>
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="src/sass/main.scss" />
 
-    <!-- Landing Page -->
-    <div class="home">
-      <div class="home__big-text">
-        <h1 class="heading heading--1">
-          <div class="home__big-text--1">explore</div>
-          <div class="home__big-text--2">the world</div>
-        </h1>
-      </div>
-      <div class="home__small-text">
-        <h3 class="heading heading--5">Discover Timeless Luxury</h3>
-      </div>
-      <div class="home__button">
-        <button class="btn btn--1 home__btn">explore &darr;</button>
-      </div>
-    </div>
-  </header>
+    <script type="module" src="src/js/controller.js"></script>
 
-  <!-- Services -->
-  <section class="about" id="services">
-    <h2 class="about__header heading heading--2">Our Services</h2>
-    <div class="about__content">
-      <!-- Content 1-->
-      <div class="about__content--main about__content--1">
-        <div class="about__content--title">Exquisite Accomodation</div>
-        <video class="about__content--video about__content--video-1" autoplay loop muted playsinline>
-          <source src="media/about-1.mp4" type="video/mp4">
+    <title>Welcome&mdash;Luxury Travels</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <!-- Background Image -->
+      <div class="header__background">
+        <video
+          class="header__background--video"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source src="./src/media/bg-video-comp.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
+      <div class="header__background--overlay"></div>
+      <!-- Navigation Bar -->
+      <navbar class="navbar">
+        <div class="logo">
+          <a class="logo__link" href="index.html">Luxury Travels</a>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#top-destinations">Explore</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#services">Our Services</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </navbar>
 
-      <!-- Content 2-->
-      <div class="about__content--main about__content--2">
-        <div class="about__content--title">Free body care</div>
-        <video class="about__content--video about__content--video-2" autoplay loop muted playsinline>
-          <source src="media/about-2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <!-- Landing Page -->
+      <div class="header__home">
+        <div class="header__big-text">
+          <h1 class="header__big-text--1 heading">explore</h1>
+          <h1 class="header__big-text--2 heading">the world</h1>
+        </div>
+        <div class="header__small-text">
+          <h3 class="heading heading--3">Discover Timeless Luxury</h3>
+        </div>
+        <div class="header__button">
+          <button class="btn btn--1 header__btn theme-toggle">
+            <span>explore</span>
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </div>
       </div>
+    </header>
 
-      <!-- Content 3-->
-      <div class="about__content--main about__content--3">
-        <div class="about__content--title">Quality food service</div>
-        <video class="about__content--video about__content--video-3" autoplay loop muted playsinline>
-          <source src="media/about-3.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+    <!-- Services -->
+    <section class="about" id="services">
+      <h2 class="about__header heading heading--2">Our Services</h2>
+      <div class="about__content">
+        <!-- Content 1-->
+        <div class="about__content--main about__content--1">
+          <div class="about__content--title">Exquisite Accomodation</div>
+          <video
+            class="about__content--video about__content--video-1"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="./src/media/about-1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Content 2-->
+        <div class="about__content--main about__content--2">
+          <div class="about__content--title">Free body care</div>
+          <video
+            class="about__content--video about__content--video-2"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="./src/media/about-2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Content 3-->
+        <div class="about__content--main about__content--3">
+          <div class="about__content--title">Quality food service</div>
+          <video
+            class="about__content--video about__content--video-3"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="./src/media/about-3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="top-destinations" id="top-destinations">
-    <h2 class="top-destinations__heading heading heading--2">
-      Top destinations
-    </h2>
-    <div class="top-destinations__content">
-      <!-- Content 1 -->
-      <figure class="top-destination top-destination--1">
-        <div class="top-destination__image-box"><img src="media/img-1.jpg" alt="Top destination 1" class="top-destination__image"></div>
-        <figcaption class="top-destination__caption">
-          Eiffel Tower, Paris
-        </figcaption>
-      </figure>
-
-      <!-- Content 2 -->
-      <figure class="top-destination top-destination--2">
-        <div class="top-destination__image-box"><img src="media/img-2.jpg" alt="Top destination 2" class="top-destination__image"></div>
-        <figcaption class="top-destination__caption">
-          Great Wall of China, Beijing
-        </figcaption>
-      </figure>
-
-      <!-- Content 3 -->
-      <figure class="top-destination top-destination--3">
-        <div class="top-destination__image-box"><img src="media/img-3.jpg" alt="Top destination 3" class="top-destination__image"></div>
-        <figcaption class="top-destination__caption">
-          Machu Picchu, Peru
-        </figcaption>
-      </figure>
-
-      <!-- Content 4 -->
-      <figure class="top-destination top-destination--4">
-        <div class="top-destination__image-box"><img src="media/img-4.jpg" alt="Top destination 4" class="top-destination__image"></div>
-        <figcaption class="top-destination__caption">
-          Colosseum, Rome
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Bookings -->
-  <section class="bookings" id="bookings">
-    <h2 class="bookings__header heading heading--2">Your Bookings</h2>
-    <div class="bookings__card">
-      <div class="bookings__background">
-        <video class="bookings__background--video" autoplay loop muted playsinline>
-          <source src="media/booking-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+    <section class="top-destinations" id="top-destinations">
+      <div class="top-destinations__indicators"></div>
+      <div class="top-destinations__previousCtrl">
+        <button id="previousSlide" class="btn-3">
+          <i class="fa-duotone fa-solid fa-chevron-left"></i>
+        </button>
       </div>
-      <div class="bookings__card-form">
-        
-        <p>Plan your next luxurious getaway with us. Fill in the details below to book your personalized travel experience.</p>
-        <!-- Booking details will be dynamically loaded here -->
-      
-        <form class="booking-form">
-          <h4 class="heading heading--4 booking-form__header">Reservation Details</h4>
-          
-          <div class="form-group">
-            <input class="form-group__input--1" type="text" id="name" placeholder="Full Name" required />
-            <label class="form-group__label" for="name">Full Name</label>
-          </div>
-
-          <div class="form-group">
-            <input class="form-group__input--1" type="email" id="email" placeholder="Email Address" required />
-            <label class="form-group__label" for="email">Email Address</label>
-          </div>
-          
-          <div class="form-group">
-            <!-- <label class="form-group__label--1" for="destination">Destination</label> -->
-            <select class="form-group__input--1" id="destination">
-              <option>Select a destination</option>
-              <option value="paris">Eiffel Tower, Paris</option>
-              <option value="beijing">Great Wall of China, Beijing</option>
-              <option value="peru">Machu Picchu, Peru</option>
-              <option value="rome">Colosseum, Rome</option>
-              <option value="new-york">Statue of Liberty, New York</option>
-              <option value="dubai">Burj Khalifa, Dubai</option>
-              <option value="sydney">Sydney Opera House, Sydney</option>
-              <option value="tokyo">Mount Fuji, Tokyo</option>
-              <option value="egypt">Pyramids of Giza, Egypt</option>
-              <option value="bali">Ubud, Bali</option>
-              <option value="venice">Grand Canal, Venice</option>
-              <option value="cape-town">Table Mountain, Cape Town</option>
-              <option value="rio">Christ the Redeemer, Rio de Janeiro</option>
-              <option value="maldives">Maldives Beaches</option>
-              <option value="iceland">Blue Lagoon, Iceland</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <!-- Dates -->
-            <div class="form-group__dates">
-              <!-- Check In -->
-              <div class="form-group__dates--check-in">
-                <label class="form-group__label--2" for="checkin">Check-in</label>
-                <input class="form-group__dates--input" type="date" id="checkin" />
+      <div class="top-destinations__nextCtrl">
+        <button id="nextSlide" class="btn-3">
+          <i class="fa-duotone fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="destination__nextSlide"></div>
+      <div class="slides">
+        <!-- <div class="destination slide destination__transition">
+          <div class="destination__overlay"></div>
+          <img
+            src="src/media/testCarousel.jpg"
+            alt="testing"
+            class="destination__img"
+          />
+          <div class="destination__contents destination__contents--animate">
+            <div class="destination__text">
+              <h1 class="destination__title destination__title--animate">
+                Ogun State - Nigeria
+              </h1>
+              <h1 class="destination__name destination__name--animate">
+                Erin Ijesha
+              </h1>
+            </div>
+            <p
+              class="destination__description destination__description--animate"
+            >
+              Water fall adventure, suitable for you and your family
+            </p>
+            <div class="destination__details destination__details--animate">
+              <div class="destination__bookmark">
+                <i class="fa-regular fa-bookmark"></i>
               </div>
-              
-              <!-- Check In -->
-              <div class="form-group__dates--check-out">
-                <label class="form-group__label--2" for="checkout">Check-out</label>
-                <input class="form-group__dates--input" type="date" id="checkout" />
+              <h3 class="destination__price-range">$200 - $400</h3>
+            </div>
+            <div class="destination__button">
+              <button class="destination__btn btn">explore location</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Pop Up -->
+      <div class="bookings">
+        <div class="bookings__overlay"></div>
+        <!-- Close Window -->
+        <div class="bookings__close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Container -->
+        <div class="bookings__container">
+          <!-- Container nav -->
+          <nav class="bookings__nav">
+            <h2 class="bookings__nav-title heading">Travel Boooking</h2>
+            <ul class="bookings__nav-list">
+              <li class="bookings__nav-item flight__tab" data-id="flight__tab">
+                <a href="#flight__tab" class="bookings__nav-link">Flight</a>
+              </li>
+              <li class="bookings__nav-item hotel__tab" data-id="hotel__tab">
+                <a href="#hotel__tab" class="bookings__nav-link">Hotel</a>
+              </li>
+              <li
+                class="bookings__nav-item reviews__tab"
+                data-id="reviews__tab"
+              >
+                <a href="#reviews__tab" class="bookings__nav-link">Reviews</a>
+              </li>
+              <li
+                class="bookings__nav-item gallery__tab"
+                data-id="gallery__tab"
+              >
+                <a href="#gallery__tab" class="bookings__nav-link">Gallery</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Flight tab -->
+          <div class="bookings__tab booking" id="flight__tab">
+            <div class="booking__header">
+              <h1 class="booking__header--title">
+                Seamless flights, timeless comfort, wrapped in luxury
+              </h1>
+              <img
+                src="./src/media/header__img.png"
+                alt="plane"
+                class="booking__header--img"
+              />
+            </div>
+            <form action="#" class="flight__form">
+              <!-- Adult and Flight Class -->
+              <div class="flight__form--group">
+                <div class="flight__form--select">
+                  <div class="select-option">
+                    <input type="text" name="passenger" value="1" />
+                    <p class="selected-option">1 Adult</p>
+                    <div class="select-option__arrow">
+                      <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                  </div>
+                  <div class="option-box">
+                    <nav>
+                      <ul class="option-box__list">
+                        <li data-value="1" class="option-box__item">1 Adult</li>
+                        <li data-value="2" class="option-box__item">
+                          2 Adults
+                        </li>
+                        <li data-value="3" class="option-box__item">
+                          3 Adults
+                        </li>
+                        <li data-value="4" class="option-box__item">
+                          4 Adults
+                        </li>
+                        <li data-value="5" class="option-box__item">
+                          5 Adults
+                        </li>
+                        <li data-value="6" class="option-box__item">
+                          6 Adults
+                        </li>
+                        <li data-value="7" class="option-box__item">
+                          7 Adults
+                        </li>
+                        <li data-value="8" class="option-box__item">
+                          8 Adults
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <div class="flight__form--select">
+                  <div class="select-option">
+                    <input type="text" name="class" value="1" />
+                    <p class="selected-option">Economy</p>
+                    <div class="select-option__arrow">
+                      <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                  </div>
+                  <div class="option-box">
+                    <nav>
+                      <ul class="option-box__list">
+                        <li data-value="1" class="option-box__item">Economy</li>
+                        <li data-value="2" class="option-box__item">
+                          Premium Economy
+                        </li>
+                        <li data-value="3" class="option-box__item">
+                          Business
+                        </li>
+                        <li data-value="4" class="option-box__item">First</li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <!-- Trip tye -->
+              <div class="flight__form--group">
+                <div class="flight__form--tripType">
+                  <input type="radio" name="tripType" value="2" id="one-way" />
+                  <label for="one-way">
+                    <div class="flight__form--radio"></div>
+                    <span>One Way</span>
+                  </label>
+                </div>
+                <div class="flight__form--tripType">
+                  <input
+                    type="radio"
+                    name="tripType"
+                    value="1"
+                    id="round-trip"
+                  />
+                  <label for="round-trip">
+                    <div class="flight__form--radio"></div>
+                    <span>Round Trip</span>
+                  </label>
+                </div>
+              </div>
+              <!-- Destination, dates -->
+              <div class="flight__form--group">
+                <div class="flight__form--trip">
+                  <div class="flight__form--departure">
+                    <i
+                      class="fa-brands fa-searchengin flight__departure--icon"
+                    ></i>
+                    <div>
+                      <label for="departure" class="flight__departure--label"
+                        >From</label
+                      >
+                      <img src="#" alt="" class="flight__query--img" />
+                    </div>
+                    <input
+                      type="search"
+                      name="searchAirport"
+                      class="flight__query"
+                      placeholder="Type to search country...."
+                      autocomplete="off"
+                    />
+                    <ul class="flight__query--results" id="searchAirport">
+                      <!-- <li class="flight__query--item">Nigeria</li> -->
+                    </ul>
+                    <div class="flight__results">
+                      <!-- <ul class="flight__query--list">
+                        <li class="flight__query--item">
+                          <p class="flight__query--code">JFK</p>
+                          <p class="flight__query--country">London</p>
+                          <p class="flight__query--airport">
+                            John F. Kenedy, International Airport
+                          </p>
+                        </li>
+                      </ul> -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flight__form--date">
+                  <div class="flight__form--departureDate">
+                    <label
+                      for="departureDate"
+                      class="flight__departureDate--label"
+                      >Departure</label
+                    >
+                    <input
+                      type="date"
+                      class="flight__departureDate"
+                      name="departureDate"
+                      id="departureDate"
+                    />
+                  </div>
+                  <div class="flight__form--arrivalDate">
+                    <label for="arrivalDate" class="flight__arrivalDate--label"
+                      >Arrival</label
+                    >
+                    <input
+                      type="date"
+                      class="flight__arrivalDate"
+                      name="arrivalDate"
+                      id="arrivalDate"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Submit -->
+              <div class="flight__form--group">
+                <button type="submit" class="flight__form--btn btn">
+                  search flights
+                </button>
+                <p class="flight__form--departureCode"></p>
+              </div>
+            </form>
+
+            <!-- Results -->
+            <div class="booking__result">
+              <div class="booking__result--header">
+                <!-- <div class="booking__result--header-departure">
+                  <img
+                    src="./src/media/img-5.jpg"
+                    alt=""
+                    class="booking__result--header-img"
+                  />
+                  <span>Lagos, Nigeria.</span>
+                </div>
+                <img
+                  src="./src/media/travel.png"
+                  alt=""
+                  class="booking__result--header-travelIcon"
+                />
+                <div class="booking__result--header-arrival">
+                  <img
+                    src="./src/media/img-3.jpg"
+                    alt=""
+                    class="booking__result--header-img"
+                  />
+                  <span>Lagos, Nigeria.</span>
+                </div> -->
+              </div>
+              <div class="booking__result--content">
+                <!-- <nav class="booking__result--nav">
+                  <ul class="booking__result--nav-list">
+                    <li class="booking__result--nav-item nav__bestFlights">
+                      <a href="#best__flights" class="booking__result--nav-link"
+                        >Best Flight(s)</a
+                      >
+                    </li>
+                    <li class="booking__result--nav-item nav__otherFlights">
+                      <a
+                        href="#other__flights"
+                        class="booking__result--nav-link"
+                        >Other Flight(s)</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+                <div
+                  id="best__flights"
+                  class="booking__result--bestFlights active"
+                >
+                  <div class="booking__result--flight">
+                    <i
+                      class="booking__result--dropdown fa-solid fa-chevron-down"
+                    ></i>
+                    <div class="booking__result--summary active">
+                      <div class="booking__result--img-box">
+                        <img
+                          src="https://www.gstatic.com/flights/airline_logos/70px/QR.png"
+                          alt="Airline logo"
+                          class="booking__result--img"
+                        />
+                      </div>
+                      <div class="booking__result--summary-airlines">
+                        Air peace, Emirates, Donier
+                      </div>
+                      <div class="booking__result--summary-time-code">
+                        <h3 class="booking__result--summary-time">11:30 PM</h3>
+                        <h5 class="booking__result--summary-code">LOS</h5>
+                      </div>
+                      <div class="booking__result--summary-flight-details">
+                        <h3 class="heading booking__result--summary-date">
+                          Mon. 14th Sept.
+                        </h3>
+                        <p class="booking__result--summary-duration">
+                          22hr 30min
+                        </p>
+                        <img
+                          src="./src/media/travel.png"
+                          alt="travel icon"
+                          class="booking__result--summary-travelIcon"
+                        />
+                        <p class="booking__result--summary-stop">3 stops</p>
+                      </div>
+                      <div class="booking__result--summary-time-code">
+                        <h3 class="booking__result--summary-time">11:30 PM</h3>
+                        <h5 class="booking__result--summary-code">LOS</h5>
+                      </div>
+                      <h4 class="heading booking__result--summary-price">
+                        $780
+                      </h4>
+                    </div>
+                    <div class="booking__result--main">
+                      
+                      <div class="booking__result--main-header">
+                        <div class="booking__result--img-box">
+                          <img
+                            src="https://www.gstatic.com/flights/airline_logos/70px/QR.png"
+                            alt="Airline logo"
+                            class="booking__result--img"
+                          />
+                        </div>
+                        <h3 class="heading booking__result--main-date">
+                          Monday, 14th Sept
+                        </h3>
+                        <button class="btn-2 booking__result--main-btn">
+                          Select Flight
+                        </button>
+                        <h4 class="heading booking__result--main-price">
+                          $780
+                        </h4>
+                      </div>
+                      <div class="booking__result--main-body">
+                        <div class="booking__result--main-details">
+                          <div class="booking__result--img-box">
+                            <img
+                              src="https://www.gstatic.com/flights/airline_logos/70px/QR.png"
+                              alt=""
+                              class="booking__result--img"
+                            />
+                          </div>
+                          <div class="booking__result--main-icons-box">
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-regular fa-circle-dot"></i>
+                          </div>
+                          <div class="booking__result--main-info">
+                            <div class="booking__result--main-departure">
+                              3:05PM &middot; Murtala Muhammed International
+                              Aiport (LOS)
+                            </div>
+                            <div class="booking__result--main-travel-time">
+                              Travel time: 7 hr 20 min
+                            </div>
+                            <div class="booking__result--main-arrival">
+                              12:25 AM &middot; Hamad International Airport
+                              (DOH)
+                            </div>
+                            <div class="booking__result--main-flight-details">
+                              Qatar Airways &middot; Boeing 787 &middot; QR 1406
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="booking__result--main-layover">
+                          1 hr 45 min layover &middot; Doha (DOH) &middot;
+                          Overnight layover
+                          <i
+                            class="fa-solid fa-triangle-exclamation color--red"
+                          ></i>
+                        </div>
+
+                        <div class="booking__result--main-details">
+                          <div class="booking__result--img-box">
+                            <img
+                              src="https://www.gstatic.com/flights/airline_logos/70px/QR.png"
+                              alt=""
+                              class="booking__result--img"
+                            />
+                          </div>
+                          <div class="booking__result--main-icons-box">
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-regular fa-circle-dot"></i>
+                          </div>
+                          <div class="booking__result--main-info">
+                            <div class="booking__result--main-departure">
+                              2:10 AM &middot; Hamad International Airport (DOH)
+                            </div>
+                            <div class="booking__result--main-travel-time">
+                              Travel time: 13 hr 50 min &middot; Overnight
+                              <i
+                                class="fa-solid fa-triangle-exclamation color--red"
+                              ></i>
+                            </div>
+                            <div class="booking__result--main-arrival">
+                              9:00 AM &middot; John F. Kennedy International
+                              Airport (JFK)
+                            </div>
+                            <div class="booking__result--main-flight-details">
+                              Qatar Airways &middot; Boeing 777 &middot; QR 703
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="other__flights" class="booking__result--otherFlights">
+                  <div class="booking__result--item">
+                    <div class="booking__result--img-box">
+                      <img
+                        src="https://www.gstatic.com/flights/airline_logos/70px/QR.png"
+                        alt="Airline logo"
+                        class="booking__result--img"
+                      />
+                    </div>
+                    <div class="booking__result--summary">
+                      <h3 class="heading booking__result--summary-date">
+                        Monday, 14th Sept. 8:30PM
+                      </h3>
+                      <h4 class="heading booking__result--summary-price">
+                        $780
+                      </h4>
+                      <i
+                        class="booking__result--dropdown fa-solid fa-chevron-down"
+                      ></i>
+                      <h4 class="booking__result--summary-departure">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        LOS
+                      </h4>
+                      <h4 class="heading booking__result--summary-info">
+                        <p class="booking__result--summary-duration">
+                          22hr 30min
+                        </p>
+                        <p class="booking__result--summary-duration">3 stops</p>
+                      </h4>
+                      <h4 class="booking__result--summary-arrival">
+                        <i class="fa-solid fa-plane-arrival"></i>
+                        JFK
+                      </h4>
+                    </div>
+                  </div>
+                </div> -->
               </div>
             </div>
           </div>
-          
-          <div class="form-group">
-            <label class="form-group__label--2" for="guests">Guests</label>
-            <select class="form-group__input--1" id="guests">
-              <option value="1">1 guest</option>
-              <option value="2">2 guests</option>
-              <option value="3">3 guests</option>
-              <option value="4">4 guests</option>
-              <option value="5">5 guests</option>
-              <option value="6">6 guests</option>
-              <option value="7">7 guests</option>
-            </select>
+
+          <!-- Hotel tab -->
+          <div class="bookings__tab" id="hotel__tab">Coming soon...</div>
+
+          <!-- Reviews tab -->
+          <div class="bookings__tab reviews" id="reviews__tab">
+            <div class="reviews__header">
+              <h2 class="heading reviews__heading">
+                what our clients have to say
+              </h2>
+            </div>
+            <div class="reviews__body">
+              <!-- <div class="review">
+                <div class="review__img-box">
+                  <img
+                    src="./src/media/profile-1.jpg"
+                    alt="profile pic"
+                    class="review__img"
+                  />
+                </div>
+                <div class="review__content-box">
+                  <div class="review__content">
+                    <h5 class="heading review__timestamp">
+                      Mon, 18 Sept. '25, 9:45AM
+                    </h5>
+                    <p class="review__text">
+                      Booking my flight was super easy and fast. The hotel
+                      suggestions were also great!
+                    </p>
+                    <h4 class="heading review__user">&mdash; Liam</h4>
+                    <h6 class="review__rating-text">Level of satisfaction:</h6>
+                    <div class="review__rating">
+                      <div class="review__rate"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <div class="review__img-box">
+                  <img
+                    src="./src/media/profile-2.jpg"
+                    alt="profile pic"
+                    class="review__img"
+                  />
+                </div>
+                <div class="review__content-box">
+                  <div class="review__content">
+                    <h5 class="heading review__timestamp">
+                      Mon, 18 Sept. '25, 9:45AM
+                    </h5>
+                    <p class="review__text">
+                      Booking my flight was super easy and fast. The hotel
+                      suggestions were also great!
+                    </p>
+                    <h4 class="heading review__user">&mdash; Liam</h4>
+                    <h6 class="review__rating-text">Level of satisfaction:</h6>
+                    <div class="review__rating">
+                      <div class="review__rate"></div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
           </div>
-          
-          <div class="form-group">
-            <button class="form-group__button btn" type="submit">book now</button>
+
+          <!-- Gallery -->
+          <div class="bookings__tab" id="gallery__tab">
+            <div class="gallery__header">
+              <h2 class="heading gallery__heading">
+                See beautiful pictures from our clients
+              </h2>
+            </div>
+            <div class="gallery__body">
+              <div class="gallery__gallery">
+                <div class="gallery__item gallery__item--1"></div>
+                <div class="gallery__item gallery__item--2"></div>
+                <div class="gallery__item gallery__item--3"></div>
+                <div class="gallery__item gallery__item--4"></div>
+                <div class="gallery__item gallery__item--5"></div>
+                <div class="gallery__item gallery__item--6"></div>
+                <div class="gallery__item gallery__item--7"></div>
+              </div>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contact" id="contact">
-    <div class="contact__image-box">
-      <img src="media/contact__img.jpg" alt="Contact Us" class="contact__image">
-    </div>
-    <div class="contact-info">
-      <h2 class="heading heading--2 contact__header">Contact Us</h2>
-      <p><strong>Address:</strong> 123 Riviera Lane, Beverly Hills, CA 90210</p>
-      <p><strong>Phone:</strong> +1 (800) 555-8901</p>
-      <p><strong>Email:</strong> info@luxurytravels.com</p>
-      <p><strong>Hours:</strong> Mon - Fri, 9AM - 6PM (PST)</p>
-    </div>
-  </section>
+    <!-- Bookings 
+    <section class="bookings" id="bookings">
+      <h2 class="bookings__header heading heading--2">Your Bookings</h2>
+      <div class="bookings__card">
+        <div class="bookings__background">
+          <video
+            class="bookings__background--video"
+            autoplay
+            loop
+            muted
+            playsinline
+          >
+            <source src="./src/media/booking-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="bookings__card-form">
+          <p>
+            Plan your next luxurious getaway with us. Fill in the details below
+            to book your personalized travel experience.
+          </p>
+          Booking details will be dynamically loaded here 
 
-  <footer class="footer">
-    <div class="footer__content">
-      <p>&copy; 2023 Luxury Travels. All rights reserved.</p>
-    </div>
-</body>
+          <form class="booking-form">
+            <h4 class="heading heading--4 booking-form__header">
+              Reservation Details
+            </h4>
+
+            <div class="form-group">
+              <input
+                class="form-group__input--1"
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                required
+              />
+              <label class="form-group__label" for="name">Full Name</label>
+            </div>
+
+            <div class="form-group">
+              <input
+                class="form-group__input--1"
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+              />
+              <label class="form-group__label" for="email">Email Address</label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-group__label--1" for="destination">Destination</label>
+              <select class="form-group__input--1" id="destination">
+                <option>Select a destination</option>
+                <option value="paris">Eiffel Tower, Paris</option>
+                <option value="beijing">Great Wall of China, Beijing</option>
+                <option value="peru">Machu Picchu, Peru</option>
+                <option value="rome">Colosseum, Rome</option>
+                <option value="new-york">Statue of Liberty, New York</option>
+                <option value="dubai">Burj Khalifa, Dubai</option>
+                <option value="sydney">Sydney Opera House, Sydney</option>
+                <option value="tokyo">Mount Fuji, Tokyo</option>
+                <option value="egypt">Pyramids of Giza, Egypt</option>
+                <option value="bali">Ubud, Bali</option>
+                <option value="venice">Grand Canal, Venice</option>
+                <option value="cape-town">Table Mountain, Cape Town</option>
+                <option value="rio">Christ the Redeemer, Rio de Janeiro</option>
+                <option value="maldives">Maldives Beaches</option>
+                <option value="iceland">Blue Lagoon, Iceland</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              Dates
+              <div class="form-group__dates">
+                Check In
+                <div class="form-group__dates--check-in">
+                  <label class="form-group__label--2" for="checkin"
+                    >Check-in</label
+                  >
+                  <input
+                    class="form-group__dates--input"
+                    type="date"
+                    id="checkin"
+                  />
+                </div>
+
+                Check In
+                <div class="form-group__dates--check-out">
+                  <label class="form-group__label--2" for="checkout"
+                    >Check-out</label
+                  >
+                  <input
+                    class="form-group__dates--input"
+                    type="date"
+                    id="checkout"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-group__label--2" for="guests">Guests</label>
+              <select class="form-group__input--1" id="guests">
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5 guests</option>
+                <option value="6">6 guests</option>
+                <option value="7">7 guests</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <button class="form-group__button btn" type="submit">
+                book now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="contact" id="contact">
+      <div class="contact__image-box">
+        <img
+          src="./src/media/contact__img.jpg"
+          alt="Contact Us"
+          class="contact__image"
+        />
+      </div>
+      <div class="contact-info">
+        <h2 class="heading heading--2 contact__header">Contact Us</h2>
+        <p>
+          <strong>Address:</strong> 123 Riviera Lane, Beverly Hills, CA 90210
+        </p>
+        <p><strong>Phone:</strong> +1 (800) 555-8901</p>
+        <p><strong>Email:</strong> info@luxurytravels.com</p>
+        <p><strong>Hours:</strong> Mon - Fri, 9AM - 6PM (PST)</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <p>&copy; 2023 Luxury Travels. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>

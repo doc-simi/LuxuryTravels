@@ -1,0 +1,153 @@
+.reviews {
+  &.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    padding: 2rem 4rem;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-size: $fs-large;
+    text-align: center;
+  }
+
+  &__body {
+    // border: 1px solid red;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.review {
+  position: relative;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  // overflow-y: auto;
+  min-height: 1rem;
+  // height: 0;
+  padding-left: 8rem;
+  margin-left: 6rem;
+  width: 100%;
+  max-width: 45rem;
+  transition: box-shadow 0.2s;
+  // border: 1px solid red;
+
+  &:hover &__content {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &:hover &__img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  &:hover &__img-box {
+    height: 100%;
+  }
+
+  &:hover &__content {
+    height: 100%;
+  }
+
+  &:hover &__name {
+    // opacity: 0;
+    display: none;
+  }
+
+  &:hover &__rate {
+    width: 80%;
+  }
+
+  &:hover {
+    // box-shadow: $shadow--5;
+    box-shadow: rgba($primary-light, 0.2) 0px 0px 0px 3px;
+    min-height: 14rem;
+
+    &:not(:first-child) {
+      margin-top: 4rem;
+    }
+  }
+
+  &__img-box {
+    width: 12rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+    // clip-path: polygon(80% 0, 100% 37%, 75% 100%, 0% 100%, 15% 0);
+  }
+
+  &__img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--primary);
+    transition: all 0.5s;
+  }
+
+  &__content-box {
+    overflow: hidden;
+  }
+
+  &__name {
+    font-size: $fs-medium;
+    font-weight: 600;
+  }
+
+  &__content {
+    display: flex;
+    height: 0;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    font-size: $fs-medium;
+    // box-shadow: $shadow--2;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.2s 0.3s;
+  }
+
+  &__timestamp {
+    font-size: $fs-small;
+    color: var(--grey-2);
+    font-weight: 500;
+    text-align: right;
+  }
+
+  &__text {
+    line-height: 1.4;
+  }
+
+  &__user {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  &__rating {
+    height: 6px;
+    border-radius: 1rem;
+    background-color: var(--bg-contrast);
+    width: 30%;
+  }
+
+  &__rate {
+    width: 0;
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: inherit;
+    transition: all 0.2s 0.7s;
+  }
+}

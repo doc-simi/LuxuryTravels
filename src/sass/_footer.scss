@@ -1,0 +1,24 @@
+/* Footer */
+.footer {
+  grid-column: full-start / full-end;
+  background-color: var(--bg-color);
+  color: var(--text);
+  padding: 2rem;
+  text-align: center;
+}
+
+// @media only screen and (max-width: 600px) {
+//   .bookings__card {
+//     background-image: none;
+//     background-color: rgba(255, 255, 255, 0.85);
+//   }
+
+//   .bookings__card-form {
+//     width: 100%;
+//   }
+
+//   .bookings__background--video {
+//     object-position: right;
+//     filter: brightness(0.95);
+//   }
+// }
