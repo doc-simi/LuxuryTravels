@@ -17,7 +17,7 @@
     "start": "parcel index.html",
     "dev": "node server.js",
     "O-build": "rmdir /s /q dist && parcel build index.html --dist-dir ./dist --no-optimize",
-    "build": "parcel build index.html --dist-dir ./dist --no-cache"
+    "build": "parcel build index.html --no-optimize"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.15.4",
