@@ -95,12 +95,18 @@ export const updateFormState = function (formData) {
 export const searchFlights = async function (params) {
   try {
     const query = new URLSearchParams(params).toString();
-    const response = await fetch(`http://localhost:3000/flights?${query}`);
+
+    // ✅ Choose API URL depending on environment
+    const API_URL =
+      process.env.NODE_ENV === 'production'
+        ? '/.netlify/functions/flights' // Netlify serverless function
+        : 'http://localhost:3000/api/flights'; // Local Express API
+
+    const response = await fetch(`${API_URL}?${query}`);
 
     if (!response.ok) throw new Error('Failed to fetch flights');
 
     const data = await response.json();
-    // console.log('✈️ Flight Data:', data);
     return data;
   } catch (error) {
     console.error('❌ Error:', error);
